@@ -1,0 +1,43 @@
+<h1 class="text-2xl font-bold">{{ name }}</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd class="font-bold text-xl">{{ name }}</dd>
+
+  <td>Edad:</td>
+  <dd class="font-bold text-xl">{{ age }}</dd>
+
+  <td>Método:</td>
+  <dd class="font-bold text-xl">{{ getHeroDescription() }}</dd>
+
+  <td>Capitalizado:</td>
+  <dd class="font-bold text-xl">{{ capitalizedName }}</dd>
+</dl>
+<!-- The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. -->
+
+
+<button
+  *ngIf="name !== 'Spiderman'"
+  
+  (click)="changeNameHero()"
+  class="bg-indigo-500 text-white rounded-lg p-2 mr-2"
+>
+  Cambiar nombre
+</button>
+
+<button
+*ngIf="age !== 25"
+  class="bg-indigo-500 text-white rounded-lg p-2"
+  (click)="changeAgeHero()"
+>
+  Cambiar edad
+</button>
+
+
+<button
+*ngIf="age === 25 && name === 'Spiderman'"
+  class="bg-indigo-500 text-white rounded-lg p-2 ml-2"
+  (click)="resetForm()"
+>
+  Reset Form
+</button>
