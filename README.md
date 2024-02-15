@@ -1,4 +1,4 @@
-# Bases de Anugulas 2024
+# Bases de Angular 2024
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
 
