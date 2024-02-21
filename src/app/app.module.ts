@@ -1,23 +1,17 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { DbzModule } from './dbz/dbz.module';
 import { AppComponent } from './app.component';
-import { CounterModule } from './counter/counter.module';
-import { HeroesModule } from './heroes/heroes.module';
 
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-
-  ],
+  declarations: [],
   imports: [
-    BrowserModule,
-	CounterModule,
-	HeroesModule   
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    CommonModule,
+    DbzModule,
+    FormsModule
+  ]
 })
-export class AppModule { }
+export class AppModuleModule { }
